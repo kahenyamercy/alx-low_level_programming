@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c -g -wa,-a,-ad  $CFILE 
+gcc -c -g -Wa,-a,-ad  $CFILE 
