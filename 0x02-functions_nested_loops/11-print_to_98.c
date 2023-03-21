@@ -18,14 +18,15 @@ void print_to_98(int n)
 			print_to_98(i);
 		}
 	}
-		else
+	else
+	{
+		for (i = n; i >= 98; i--)
 		{
-			for (i = n; i >= 98; i--)
-			{
-				if (i != n)
-					_putchar(',');
-				print_to_98(i);
-			}
+			if (i != n)
+				_putchar(',');
+			print_to_98(i);
 		}
-		_putchar('\n');
+	}
+	_putchar('\n');
 }
+
