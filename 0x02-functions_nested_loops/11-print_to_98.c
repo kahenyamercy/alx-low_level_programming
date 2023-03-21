@@ -15,23 +15,17 @@ void print_to_98(int n)
 		{
 			if (i != n)
 				_putchar(',');
-			_putchar(' ');
-		if (i / 10)
-			_putchar(i / 10 + '0');
-		_putchar(i % 10 + '0');
+			print_to_98(i);
 		}
 	}
-	else
-	{
-		for (i = n; i >= 98; i--)
+		else
 		{
-			if (i != n)
-				_putchar(',');
-			_putchar(' ');
-			if (i / 10)
-				_putchar(i / 10 + '0');
-			_putchar(i % 10 + '0');
+			for (i = n; i >= 98; i--)
+			{
+				if (i != n)
+					_putchar(',');
+				print_to_98(i);
+			}
 		}
-	}
-	_putchar('\n');
+		_putchar('\n');
 }
