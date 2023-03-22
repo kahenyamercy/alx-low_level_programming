@@ -11,11 +11,11 @@ int main(void)
 	int i;
 
 	printf("%d, %d, ", a, b);
-	for (i = 2; i < 50; i++)
+	for (i = 1; i < 50; i++)
 	{
 		c = a + b;
 		printf("%d", c);
-		if (i <= 49)
+		if (i < 49)
 			printf(", ");
 		a = b;
 		b = c;
