@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-	int sum = 0, i;
+	int sum = 0;
+	int i;
 
 	for (int i = 0; i < 1024; i++)
 	{
