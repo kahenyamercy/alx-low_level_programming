@@ -7,7 +7,6 @@
 int main(void)
 {
 	int sum = 0;
-	int i;
 
 	for (int i = 0; i < 1024; i++)
 	{
@@ -17,6 +16,6 @@ int main(void)
 		}
 	}
 	printf("%d\n", sum);
-	return (0);
+	return 0;
 }
 
