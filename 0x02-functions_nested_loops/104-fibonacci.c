@@ -5,15 +5,16 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, c;
-	int i;
+	int a = 1, b = 2, c, count = 0;
 
 	printf("%d, %d, ", a, b);
-	for (i = 3; i <= 98; i++)
+	count += 2;
+	while (count < 98)
 	{
 		c = a + b;
 		printf("%d", c);
-		if (i < 98)
+		count++;
+		if (count < 98)
 		{
 			printf(", ");
 		}
