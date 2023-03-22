@@ -10,8 +10,8 @@ int main(void)
 	int a = 1, b = 2, c;
 	int i;
 
-	printf("%d, %d, ", a, b);
-	for (i = 3; i < 50; i++)
+	printf("%d, %d,", a, b);
+	for (i = 2; i < 50; i++)
 	{
 		c = a + b;
 		printf("%d", c);
