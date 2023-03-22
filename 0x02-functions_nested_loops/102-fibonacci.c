@@ -12,8 +12,8 @@ int main(void)
 	unsigned long c;
 	int i;
 
-	printf("%lu, %lu", a, b);
-	for (i = 1; i < 50; i++)
+	printf("%lu, %lu, ", a, b);
+	for (i = 1; i < 49; i++)
 	{
 		c = a + b;
 		printf("%lu", c);
@@ -22,7 +22,7 @@ int main(void)
 		if (i == 49)
 		printf("\n");
 		else
-			printf(",");
+			printf(", ");
 	}
 	return (0);
 }
