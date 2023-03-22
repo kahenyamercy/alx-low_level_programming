@@ -12,7 +12,7 @@ int main(void)
 	unsigned long c;
 	int i;
 
-	printf("%lu, %lu, ", a, b);
+	printf("%lu,%lu, ", a, b);
 	for (i = 1; i < 49; i++)
 	{
 		c = a + b;
