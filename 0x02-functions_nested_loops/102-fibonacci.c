@@ -15,7 +15,7 @@ int main(void)
 	{
 		c = a + b;
 		printf("%d", c);
-		if (i < 50)
+		if (i <=49)
 			printf(", ");
 		a = b;
 		b = c;
