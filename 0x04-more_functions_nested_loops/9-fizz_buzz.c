@@ -3,7 +3,8 @@
  * main - Entry point
  * Description: prints nmbers from 1 to 100,replacing multiples
  * of 3 with "Fizz" and multiples of 5 with "Buzz" and multiples
- * of both with "FizzBuzz"
+ * of both with "FizzBuzz".
+ * Each number or word is separated by a space.
  * Return: 0
  */
 int main(void)
