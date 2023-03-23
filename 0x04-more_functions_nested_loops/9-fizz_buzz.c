@@ -1,8 +1,8 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
- * Return: 0
+ * Description: Prints the numbers from 1 to 100,
+ * Return: Always 0 (success)
  */
 int main(void)
 {
@@ -10,7 +10,7 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 15 == 0)
+		if (i % 3 == 0 && i % 5 == 0)
 		{
 			printf("FizzBuzz ");
 		}
