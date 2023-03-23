@@ -1,11 +1,12 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- * Description: prints nmbers from 1 to 100,replacing multiples
- * of 3 with "Fizz" and multiples of 5 with "Buzz" and multiples
- * of both with "FizzBuzz".
+ * main - prints numbers from 1 to 100,
+ * replacing multiples of three with "Fizz",
+ * multiples of five with "Buzz", and multiples of both with "FizzBuzz".
  * Each number or word is separated by a space.
- * Return: Always 0 (success)
+ *
+ * Return: void
  */
 int main(void)
 {
@@ -29,8 +30,7 @@ int main(void)
 		{
 			printf("%d ", i);
 		}
-
-		printf("\n");
 	}
+	printf("\n");
 	return (0);
 }
