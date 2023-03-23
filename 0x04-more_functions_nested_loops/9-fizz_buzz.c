@@ -6,8 +6,7 @@
  * multiples of five with "Buzz", and multiples of both with "FizzBuzz".
  * Each number or word is separated by a space.
  *
- * Returns:
- *	None
+ * Return: 0
  */
 int main(void)
 {
@@ -33,5 +32,6 @@ int main(void)
 		}
 	}
 	printf("\n");
+
 	return (0);
 }
