@@ -5,7 +5,7 @@
  * of 3 with "Fizz" and multiples of 5 with "Buzz" and multiples
  * of both with "FizzBuzz".
  * Each number or word is separated by a space.
- * Return: 0
+ * Return: Always 0 (success)
  */
 int main(void)
 {
