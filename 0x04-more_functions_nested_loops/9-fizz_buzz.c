@@ -1,9 +1,14 @@
-#include <stdio.h>
 /**
  * main - Entry point
+ *
  * Description: Prints the numbers from 1 to 100,
- * Return: Always 0 (success)
+ * replacing multiples of 3 with "Fizz", multiples of 5 with "Buzz",
+ * and multiples of both 3 and 5 with "FizzBuzz".
+ *
+ * Return: Always 0 (Success)
  */
+#include <stdio.h>
+
 int main(void)
 {
 	int i;
@@ -27,7 +32,6 @@ int main(void)
 			printf("%d ", i);
 		}
 	}
-
 	printf("\n");
 
 	return (0);
