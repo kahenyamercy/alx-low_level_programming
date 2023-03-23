@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints numbers from 1 to 100,
+ * main - Entry point
+ * Description: prints numbersfrom 1 to 100,
  * replacing multiples of three with "Fizz",
  * multiples of five with "Buzz", and multiples of both with "FizzBuzz".
  * Each number or word is separated by a space.
