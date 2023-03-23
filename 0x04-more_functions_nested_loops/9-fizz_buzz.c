@@ -2,11 +2,6 @@
 
 /**
  * main - Entry point
- * Description: prints numbersfrom 1 to 100,
- * replacing multiples of three with "Fizz",
- * multiples of five with "Buzz", and multiples of both with "FizzBuzz".
- * Each number or word is separated by a space.
- *
  * Return: 0
  */
 int main(void)
@@ -32,6 +27,7 @@ int main(void)
 			printf("%d ", i);
 		}
 	}
+
 	printf("\n");
 
 	return (0);
