@@ -1,18 +1,15 @@
+#include "main.h"
 #include <stdio.h>
+
 /**
- * main - Entry point
- *
- * Description: Prints the numbers from 1 to 100,
- * replacing multiples of 3 with "Fizz", multiples of 5 with "Buzz",
- * and multiples of both 3 and 5 with "FizzBuzz".
- *
- * Return: Always 0 (Success)
+ * main - Entry piont
+ * Return: Always 0
  */
 int main(void)
 {
-	int i;
+	int i = 1;
 
-	for (i = 1; i <= 100; i++)
+	for (; i < 100 ; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 			printf("FizzBuzz ");
@@ -23,8 +20,7 @@ int main(void)
 		else
 			printf("%d ", i);
 	}
-
-	printf("\n");
+	printf("Buzz\n");
 
 	return (0);
 }
