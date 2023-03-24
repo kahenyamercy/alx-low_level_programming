@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * main - entry point
+ * main - Entry point
+ *
  * Return: 0
  */
 int main(void)
@@ -9,18 +10,21 @@ int main(void)
 
 	printf("%d, %d, ", a, b);
 	count += 2;
+
 	while (count < 98)
 	{
 		c = a + b;
+		a = b;
+		b = c;
 		printf("%d", c);
 		count++;
+
 		if (count < 98)
 		{
 			printf(", ");
 		}
-		a = b;
-		b = c;
 	}
+
 	printf("\n");
 	return (0);
 }
