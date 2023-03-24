@@ -21,7 +21,7 @@ int main(void)
 	{
 		if (count == 50)
 		{
-			printf("%lu \n", next);
+			printf("%lu\n", next);
 		}
 		else
 		{
