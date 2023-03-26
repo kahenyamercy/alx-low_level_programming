@@ -3,23 +3,21 @@
  * main - entry point
  * Return: 0
  */
+
 int main(void)
 {
-	unsigned long a = 1, b = 2;
-	unsigned long i;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
-	printf("%lu, %lu ", a, b);
-	for (i = 2; i <= 98; i++)
+	for (count = 0; count < 98; count++)
 	{
-		unsigned long c = a + b;
+		printf("%lu", fib2);
+		sum = fib1 + fib2;
+		fib1 = fib2;
+		fib2 = sum;
 
-		printf("%lu", c);
-		if (i < 97)
-		{
+		if (count != 97)
 			printf(", ");
-		}
-		a = b;
-		b = c;
 	}
 	printf("\n");
 	return (0);
