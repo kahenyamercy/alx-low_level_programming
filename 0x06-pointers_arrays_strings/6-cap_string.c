@@ -18,22 +18,23 @@ char *cap_string(char *s)
 		capitalize_next = 0; /*reset the capitalize flag*/
 		switch (s[i])
 		{
-			case ' ':;
-			case '\t':;
-			case '\n':;
-			case ',':;
-			case ';':;
-			case '.':;
-			case '!':;
-			case '?':;
-			case '"':;
-			case '(':;
-			case ')':;
-			case '{':;
-			case '}':;
+
+			case ' ':
+			case '\t':
+			case '\n':
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
 			capitalize_next = 1; /*set capitalize for the next char*/
 				break;
-			default:;
+			default:
 			break;
 		}
 
