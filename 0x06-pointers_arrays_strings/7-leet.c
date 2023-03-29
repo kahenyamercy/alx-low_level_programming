@@ -2,12 +2,12 @@
 /**
  * leet - encodes a string into 1337
  * @s: input string
- * Return: the pointer to destination
+ * Return: s
  */
 char *leet(char *s)
 {
 	char *letters = "AEOTLaeotl";
-	char *numbers = "4307104310";
+	char *numbers = "4307143071";
 	int i;
 	int j;
 
