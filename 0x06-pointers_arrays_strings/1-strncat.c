@@ -20,5 +20,13 @@ char *_strncat(char *dest, char *src, int n)
 		*dest++ = *src++;
 	n--;
 	}
+
+	/*If null character is encountered in src before n bytes are read append
+	 * null character to dest.*/
+	if (*src == '\0')
+	{
+		*dest = '\0';
+	}
+
 	return (dest_start);
 }
