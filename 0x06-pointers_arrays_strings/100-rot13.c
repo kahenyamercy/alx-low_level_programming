@@ -6,18 +6,27 @@
  */
 char *rot13(char *s)
 {
-	int i;
+	int i, j;
+	char *p = s;
+	char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *rot13 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*p)
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
+		i = 0;
+		j = 0;
+
+		while (*(alpha + i) != '\0')
 		{
-			s[i] = (((s[i] - 'a') + 13) % 26) + 'a';
+			if (*(alpha + i) == *p)
+			{
+				*p = *(rot13 + j);
+				break;
+			}
+			i++;
+			j++;
 		}
-		else if (s[i] >= 'A' && s[i] <= 'Z')
-		{
-		s[i] = (((s[i] - 'A') + 13) % 26) + 'A';
-		}
+		p++;
 	}
 	return (s);
 }
