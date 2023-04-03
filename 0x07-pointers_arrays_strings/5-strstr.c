@@ -10,16 +10,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	if (!*needle)/*if it is emptyreturn haystack*/
-		return (haystack);
+	char *pointer = strstr(haystack, needle);
 
-	while (*haystack != '\0')
-	{
-		if ((*haystack == *needle) && !strcmp(haystack, needle))
-		{
-			return (haystack);
-		}
-		haystack++;
-	}
-	return (NULL);
+	return (pointer);
 }
