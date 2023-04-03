@@ -10,7 +10,21 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *pointer = strstr(haystack, needle);
+	char *ptrn1, *ptrn2, *ptrn3;
 
-	return (pointer);
+	for (ptrn1 = haystack; *ptrn1 != '\0'; ptrn1++)
+	{
+		ptrn2 = ptrn1;
+		ptrn3 = needle;
+		while (*ptrn3 != '\0' && *ptrn2 == *ptrn3)
+		{
+			ptrn2++;
+			ptrn3++;
+		}
+		if (*ptrn3 == '\0')
+		{
+			return ptrn1;
+		}
+	}
+	return (NULL);
 }
