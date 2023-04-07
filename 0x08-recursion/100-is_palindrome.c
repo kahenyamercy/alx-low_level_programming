@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
 /**
- * is_palindrome - returns a palindrome
+ * is_palindrome_helper - returns a palindrome
  * @s: string to be checked
  * @left: the left index in the string
  * @right: the right index in the string
@@ -17,7 +17,7 @@ int is_palindrome_helper(char *s, int left, int right)
 	{
 		return (0);
 	}
-	else 
+	else
 	{
 		return (is_palindrome_helper(s, left + 1, right - 1));
 	}
@@ -32,7 +32,7 @@ int is_palindrome(char *s)
 {
 	int length = strlen(s);
 	int left = 0;
-	int right = length -1;
+	int right = length - 1;
 
 		if (length == 0 || length == 1)
 		{
