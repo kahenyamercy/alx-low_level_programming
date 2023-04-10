@@ -17,7 +17,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-		result = a * b;
-		printf("%d\n", result);
-		return (0);
+	result = a * b;
+	printf("%d\n", result);
+
+	return (0);
 }
