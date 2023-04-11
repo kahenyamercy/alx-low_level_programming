@@ -11,20 +11,18 @@ char *str_concat(char *s1, char *s2)
 {
 	unsigned int len1 = strlen(s1);
 	unsigned int len2 = strlen(s2);
-	unsigned int i, j;
 	char *s3;
 
-	s3 = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
-	if (s3 == NULL)
-		return (NULL);
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	for (j = 0; j < len1; j++)
-		s3[j] = s1[j];
-	for (i = 0; i < len2; i++)
-		s3[j + i] = s2[i];
-	s3[j + i] = '\0';
+
+	s3 = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	if (s3 == NULL)
+		return (NULL);
+	memcpy(s3, s1, len1);
+	memcpy(s3 + len1, s2, len2);
+	s3[len1 + len2] = '\0';
 	return (s3);
 }
