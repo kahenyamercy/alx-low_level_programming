@@ -20,8 +20,8 @@ char *str_concat(char *s1, char *s2)
 	for (j = 0; j < len1; j++)
 		s3[j] = s1[j];
 	for (i = 0; i < len2; i++)
-		s3[len1 + i] = s2[i];
-	s3[len1 + i] = '\0';
+		s3[j + i] = s2[i];
+	s3[j + i] = '\0';
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	if (s3 == NULL)
