@@ -16,11 +16,11 @@ char **strtow(char *str)
 	int num_words = 0;
 	int len = 0;
 	int start = i;
-	int j;
+	int j = 0;
 
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
-	nwords = malloc((n + 1) *  sizeof(char *));
+	nwords = malloc(sizeof(char) * (n + 1));
 	if (nwords == NULL)
 		return (NULL);
 	while (i < n)
