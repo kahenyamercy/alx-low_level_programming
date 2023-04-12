@@ -20,7 +20,7 @@ char **strtow(char *str)
 
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
-	nwords = calloc(n, sizeof(char *));
+	nwords = malloc((n + 1) *  sizeof(char *));
 	if (nwords == NULL)
 		return (NULL);
 	while (i < n)
