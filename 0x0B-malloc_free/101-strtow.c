@@ -30,7 +30,7 @@ char **strtow(char *str)
 			len = i - start;
 			if (len > 0)
 			{
-				word = malloc((len + 1) * sizeof(char));
+				word = malloc((len + 1) * sizeof(char *));
 				if (word == NULL)
 				{
 					for (j = 0; j < num_words; j++)
