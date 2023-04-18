@@ -27,10 +27,9 @@ int _sqrt_helper(int start, int end, int n, int ans)
 
 		if (mid * mid == n)
 			return (mid);
-		else if (mid * mid < n)
+		if (mid * mid < n)
 			return (_sqrt_helper(mid + 1, end, n, mid));
-		else
-			return (_sqrt_helper(start, mid - 1, n, ans));
+		return (_sqrt_helper(start, mid - 1, n, ans));
 	}
 }
 
