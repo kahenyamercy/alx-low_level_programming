@@ -42,5 +42,10 @@ int _sqrt_helper(int start, int end, int n, int ans)
  */
 int _sqrt_recursion(int n)
 {
-	return (_sqrt_helper(1, n, n, 0));
+	if (n < 0)
+		return (-1);
+	else if (n == 0 || n == 1)
+		return (n);
+	else
+		return (_sqrt_helper(1, n, n, 0));
 }
