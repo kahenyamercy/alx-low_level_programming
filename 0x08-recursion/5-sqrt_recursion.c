@@ -1,48 +1,46 @@
 #include "main.h"
 /**
- * _sqrt_recursion - square root of a number
- * @n: num to be checked
- * Return:sqrt of n else -1
+ * _sqrt_helper - Computes the square root of a number using a binary search
+ * @start: The starting index of the search range
+ * @end: The ending index of the search range
+ * @n: The number whose square root is being computed
+ * @ans: The current best approximation of the square root
+ *
+ * Return: The square root of n
  */
-int _sqrt_recursion(int n)
+int _sqrt_helper(int start, int end, int n, int ans)
 {
-	int start = 1, end = n, mid, ans;
-
-	/* Base cases*/
 	if (n < 0)
-	{
-		return (-1); /* Invalid input*/
-	}
+		return (-1);
 	else if (n == 0 || n == 1)
+		return (n);
+	else if (start > end)
 	{
-		return (n); /* Base case: square root of 0 or 1 is itself*/
-	}
-	/* Recursive case: binary search for the square root*/
-	while (start <= end)
-	{
-		mid = (start + end) / 2;
-		if (mid * mid == n)
-		{
-			return (mid); /* Found exact square root*/
-		}
-		else if (mid * mid < n)
-		{
-			start = mid + 1;
-			ans = mid; /* Save as potential answer*/
-		}
+		if (ans * ans <= n && (ans + 1) * (ans + 1) > n)
+			return (ans);
 		else
-		{
-			end = mid - 1;
-		}
-	}
-	/* Return the closest integer approximation*/
-	if (ans * ans <= n && (ans + 1) * (ans + 1) > n)
-	{
-		return (ans);
+			return (ans + 1);
 	}
 	else
 	{
-		return (ans + 1);
+		int mid = (start + end) / 2;
+
+		if (mid * mid == n)
+			return (mid);
+		else if (mid * mid < n)
+			return (_sqrt_helper(mid + 1, end, n, mid));
+		else
+			return (_sqrt_helper(start, mid - 1, n, ans));
 	}
-	return (ans); /* Return the closest integer approximation*/
+}
+
+/**
+ * _sqrt_recursion - Computes the square root of a number using recursion
+ * @n: The number whose square root is being computed
+ *
+ * Return: The square root of n
+ */
+int _sqrt_recursion(int n)
+{
+	return (_sqrt_helper(1, n, n, 0));
 }
