@@ -20,18 +20,18 @@ int main(int argc, char *argv[])
 	if (argc != 4)/*Check if the function pointer is valid*/
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 	if (!func)/*Check if the function pointer is valid*/
 	{
 		printf("Error\n");
-		exit(99);
+		return (99);
 	}
 	/*Check if division or modulo by zero is attempted*/
 	if ((c == '/' || c == '%') && num2 == 0)
 	{
 		printf("Error\n");
-		exit(100);
+		return (100);
 	}
 	/* Perform the operation*/
 	result = func(num1, num2);
