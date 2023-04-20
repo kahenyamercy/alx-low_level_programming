@@ -2,40 +2,41 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
- * @argc: argument count
- * @argv: array containing number of arguments
- * Return: 0
+ * main - prints opcodes of its own main function
+ * @argc: number of arguments passed
+ * @argv: array of arguments passed
+ *
+ * Return: 0 on success, 1 if incorrect number of arguments,
+ * 2 if negative byte count
  */
-int main(int argc, char *argv[]);
+int main(int argc, char *argv[])
 {
-	int bytes, i;
-	char *arr;
+	int i, num_bytes;
+	char *addr;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
-		exit(1);
+		return (1);
 	}
 
-	bytes = atoi(argv[1]);
-
-	if (bytes < 0)
+	num_bytes = atoi(argv[1]);
+	if (num_bytes < 0)
 	{
 		printf("Error\n");
-		exit(2);
+		return (2);
 	}
 
-	arr = (char *)main;
+	addr = (char *)&main;
 
-	for (i = 0; i < bytes; i++)
+	for (i = 0; i < num_bytes; i++)
 	{
-		if (i == bytes - 1)
-		{
-			printf("%02hhx\n", arr[i]);
-			break;
-		}
-		printf("%02hhx ", arr[i]);
+		printf("%02hhx", addr[i]);
+		if (i == num_bytes - 1)
+			printf("\n");
+		else
+			printf(" ");
 	}
+
 	return (0);
 }
