@@ -1,16 +1,18 @@
 #include <stdio.h>
-#include  "variadic_functions.h"
+#include <stdarg.h>
+#include "variadic_functions.h"
 /**
  * print_all - prints anything
  * @format: is a list of types of arguments passed to the function
  *
- * Return:none
+ * Return: none
  */
 void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i = 0;
 	char c, *s;
+	double f;
 
 	va_start(args, format);
 
@@ -23,11 +25,11 @@ void print_all(const char * const format, ...)
 				printf("%c", c);
 				break;
 			case 'i':
-				i = va_arg(args, int);
-				printf("%d", i);
+				printf("%d", va_arg(args, int));
 				break;
 			case 'f':
-				printf("%f", va_arg(args, double));
+				f = va_arg(args, double);
+				printf("%f", f);
 				break;
 			case 's':
 				s = va_arg(args, char *);
@@ -36,13 +38,16 @@ void print_all(const char * const format, ...)
 				else
 					printf("(nil)");
 				break;
+			default:
+				/* Ignore any other format specifier */
+				break;
 		}
-		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f'
-					|| format[i] == 's') && format[i + 1])
+		/* Print comma and space unless it's the last argument */
+		if (format[i + 1])
 			printf(", ");
 		i++;
 	}
-
 	printf("\n");
 	va_end(args);
 }
+
