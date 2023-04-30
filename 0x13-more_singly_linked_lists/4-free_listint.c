@@ -1,11 +1,11 @@
-#include "lists.h"
+/*#include "lists.h"*/
 /**
  * free_listint - frees a linked list
  * @head: pointer to the first node
  *
  * Return; none
  */
-void free_listint(listint_t *head)
+/*void free_listint(listint_t *head)
 {
 	listint_t *ptr;
 
@@ -16,4 +16,4 @@ void free_listint(listint_t *head)
 		free(ptr);
 
 	}
-}
+}*/
