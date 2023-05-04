@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 	}
 
 	/*determine num of bits in a num*/
-	while (temp > 0)
+	while (temp != 0)
 	{
 		num_bits++;
 		temp >>= 1;
