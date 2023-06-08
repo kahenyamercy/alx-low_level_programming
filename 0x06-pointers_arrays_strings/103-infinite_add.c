@@ -9,18 +9,6 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int result = *n1 + *n2;
-		int size = sizeof(result);
-
-		if (size < size_r)
-		{
-			*r = size;
-		}
-
-		else
-		{
-			return (0);
-		}
-		return (r);
+	int 
 
 }
